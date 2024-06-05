@@ -1,5 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Carrusel de experiencia
+
+    function mostrarSiguienteElemento(items, currentItem) {
+        items[currentItem].classList.remove('active');
+        currentItem = (currentItem + 1) % items.length;
+        items[currentItem].classList.add('active');
+        return currentItem;
+    }
+    function iniciarCarruselAutomatico(items) {
+        let currentItem = 0;
+        setInterval(() => {
+            currentItem = mostrarSiguienteElemento(items, currentItem);
+        }, 4000); 
+    }
+
+    const carruselEducacion = document.querySelector('.carrusel-educacion');
+    if (carruselEducacion) {
+        const itemsEducacion = carruselEducacion.querySelectorAll('.carrusel-item');
+        iniciarCarruselAutomatico(itemsEducacion);
+    }
+
+    const carruselHabilidades = document.querySelector('.carrusel-habilidades');
+    if (carruselHabilidades) {
+        const itemsHabilidades = carruselHabilidades.querySelectorAll('.carrusel-item');
+        iniciarCarruselAutomatico(itemsHabilidades);
+    }
+
     const carruselExperiencia = document.querySelector('.carrusel-experiencia');
     if (carruselExperiencia) {
         const itemsExperiencia = carruselExperiencia.querySelectorAll('.carrusel-item');
@@ -17,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function startAutoSlide() {
             autoSlideInterval = setInterval(() => {
                 showItemExperiencia(currentItemExperiencia + 1);
-            }, 3000); // Cambia cada 3 segundos
+            }, 3000); 
         }
 
         function stopAutoSlide() {
@@ -26,24 +51,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
         prevButtonExperiencia.addEventListener('click', function () {
             showItemExperiencia(currentItemExperiencia - 1);
-            stopAutoSlide(); // Para el deslizamiento automático al usar los botones
-            startAutoSlide(); // Reinicia el deslizamiento automático
+            stopAutoSlide(); 
+            startAutoSlide(); 
         });
 
         nextButtonExperiencia.addEventListener('click', function () {
             showItemExperiencia(currentItemExperiencia + 1);
-            stopAutoSlide(); // Para el deslizamiento automático al usar los botones
-            startAutoSlide(); // Reinicia el deslizamiento automático
+            stopAutoSlide(); 
+            startAutoSlide(); 
         });
 
-        // Initialize the first item as active
         itemsExperiencia[currentItemExperiencia].classList.add('active');
 
-        // Start the automatic slide
+    
         startAutoSlide();
     }
+    
 
-    // Carrusel de proyectos
     const carruselHorario = document.querySelector('.carrusel-horario');
     if (carruselHorario) {
         const itemsHorario = carruselHorario.querySelectorAll('.carrusel-item');
@@ -65,11 +89,9 @@ document.addEventListener('DOMContentLoaded', function () {
             showItemHorario(currentItemHorario + 1);
         });
 
-        // Initialize the first item as active
         itemsHorario[currentItemHorario].classList.add('active');
     }
 
-    // Ver más detalles de los proyectos
     const proyectos = document.querySelectorAll('.proyecto');
 
     proyectos.forEach(proyecto => {

@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae</title>
     <meta name="keywords" content="Curriculum Vitae, CV, Desarrollador Web, Programador">
-    <meta name="description" content="Curriculum Vitae de Nombre Completo, Desarrollador Web.">
-    <meta name="author" content="Nombre Completo">
+    <meta name="description" content="Curriculum Vitae de Fulco Pincay, Desarrollador Web.">
+    <meta name="author" content="Fulco Pincay">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+
 </head>
 <body>
+   
+      
+      
     <header>
-        <h1>Nombre Completo</h1>
-        <p>Desarrollador Web</p>
+        <div class="foto-info">
+            <img src="img/h.jpg" alt="Foto de perfil">
+            <div class="texto-info">
+                <h1>Fulco Pincay</h1>
+                <p>Desarrollador Web</p>
+            </div>
+        </div>
+        
     </header>
     <nav>
         <ul>
@@ -26,6 +38,13 @@
         </ul>
     </nav>
     <main>
+        <div id="video-container">
+            <video autoplay muted loop id="video-background">
+                <source src="img/i.mp4" type="video/mp4">
+                
+            </video>
+        </div>
+        <div class="container">
         <section id="perfil">
             <h2>Perfil</h2>
             <div class="perfil-contenedor">
@@ -36,46 +55,108 @@
                     Mi objetivo es seguir aprendiendo y creciendo como desarrollador, contribuyendo con soluciones creativas y eficientes en cada oportunidad que se me presente.</p>
             </div>
         </section>
-        <section id="experiencia">
+        <section id="experiencia" >
             <h2>Experiencia</h2>
             <div class="carrusel carrusel-experiencia">
                 <button class="carrusel-prev-experiencia">&lt;</button>
                 <div class="carrusel-items">
                     <div class="carrusel-item active">
+                        <i class="fas fa-tools"></i>
                         <h3>Pasantías en el IESS de Jipijapa</h3>
-                        <p>En el año 2019, manejé el sistema para agendar citas y realicé mantenimiento de máquinas en el área de admisión.</p>
+                        <p>Durante mis pasantías en el IESS de Jipijapa en 2019, adquirí experiencia en el manejo del sistema de 
+                            agendamiento de citas y realicé labores de mantenimiento de equipos en el área de admisión. Mi trabajo
+                             involucró una estrecha interacción con pacientes y personal médico, facilitando el proceso de admisión 
+                             y contribuyendo al funcionamiento eficiente del área.</p>
                     </div>
                     <div class="carrusel-item">
+                        <i class="fas fa-code"></i>
                         <h3>Profesor Temporal en la UNESUM</h3>
-                        <p>De mayo a agosto de 2023, impartí clases de programación orientada a objetos.</p>
+                        <p>Entre mayo y agosto de 2023, tuve la oportunidad de ser profesor temporal en la UNESUM,
+                             impartiendo clases de programación orientada a objetos. Durante este tiempo, desarrollé 
+                             material didáctico, fomenté el trabajo en equipo y recibí retroalimentación positiva sobre 
+                             mi desempeño como docente.</p>
                     </div>
                     <div class="carrusel-item">
+                        <i class="fas fa-chart-bar"></i>
                         <h3>Ayudante de Estadística en PAO 2</h3>
-                        <p>En el año 2023, trabajé como ayudante de estadística.</p>
+                        <p>En 2023, colaboré como ayudante de estadística en el proyecto PAO 2, donde participé
+                             en la recopilación, análisis y presentación de datos. Trabajando en equipo, utilicé 
+                             herramientas estadísticas y software especializado para garantizar la precisión y 
+                             fiabilidad de los resultados.</p>
                     </div>
                     <div class="carrusel-item">
+                        <i class="fas fa-cogs"></i>
+                        <i class="fas fa-graduation-cap"></i>
                         <h3>Desarrollador de Sistemas para Comercial Jennifer</h3>
-                        <p>Implementé sistemas de facturación electrónica, puntos de venta e inventario. También trabajé en un proyecto para la escuela Unidad Carlos Pomerio Zambrano.</p>
+                        <p>Como desarrollador de sistemas para Comercial Jennifer, implementé soluciones
+                             tecnológicas como sistemas de facturación electrónica, puntos de venta e inventario. 
+                             Mi trabajo incluyó el diseño, desarrollo y mantenimiento de sistemas informáticos, 
+                             colaborando estrechamente con el equipo para satisfacer sus necesidades tecnológicas.</p>
                     </div>
                 </div>
                 <button class="carrusel-next-experiencia">&gt;</button>
             </div>
         </section>
+
+        
+        
         <section id="educacion">
             <h2>Educación</h2>
-            <ul>
-                <li>Título 1: Descripción de la educación.</li>
-                <li>Título 2: Descripción de la educación.</li>
-            </ul>
+            <div class="carrusel carrusel-educacion">
+                <div class="carrusel-items">
+                    <div class="carrusel-item active">
+                        <i class="fas fa-school"></i> <!-- Ícono de escuela -->
+
+                        <h3>Unidad Educativa Redemptio</h3>
+                        <p>Mi experiencia tanto en la escuela primaria como en el colegio, 
+                            la Unidad Educativa Redemptio en Jipijapa, Manabí, ha sido un pilar fundamental
+                             en mi desarrollo académico y personal. Durante mis años en esta institución, 
+                             pude apreciar su compromiso con la excelencia educativa y el crecimiento 
+                             integral de los estudiantes,la combinación de una sólida formación técnica y académica.</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <i class="fas fa-university"></i> <!-- Ícono de universidad -->
+                        <h3>Escuela Superior Politecnica del Litoral</h3>
+                        <p>Durante mi trayectoria académica, 
+                            he tenido el privilegio de formar parte de la Escuela Superior Politécnica del Litoral (ESPOL) en Guayaquil, Ecuador.
+                            Desde mis primeros años como estudiante de pregrado, la ESPOL ha sido mucho más que una institución educativa;
+                            ha sido un espacio de crecimiento personal y profesional. Mis experiencias en la ESPOL han sido diversas y enriquecedoras.</p>
+                    </div>
+                </div>
+               
+
+            </div>
         </section>
+        
         <section id="habilidades">
             <h2>Habilidades</h2>
-            <ul>
-                <li>Habilidad 1</li>
-                <li>Habilidad 2</li>
-                <li>Habilidad 3</li>
-            </ul>
+            <div class="carrusel carrusel-habilidades">
+                <div class="carrusel-item active">
+                    <i class="fas fa-cogs"></i>
+                    <p>Desarrollo mi pensamiento analítico, lo que me permite abordar problemas de manera crítica y encontrar soluciones efectivas mediante un enfoque lógico y estructurado.</p>
+                </div>
+                <div class="carrusel-item">
+                    <i class="fas fa-wrench"></i>
+                    <p>Soy hábil para resolver problemas, identificando y abordando una amplia variedad de desafíos técnicos y prácticos en diferentes contextos.</p>
+                </div>
+                <div class="carrusel-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <p>Domino las matemáticas y estadísticas, lo que me permite realizar análisis numéricos y tomar decisiones informadas en diversos campos.</p>
+                </div>
+                <div class="carrusel-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <p>Tengo competencia en programación y desarrollo de software, creando aplicaciones y sistemas informáticos funcionales y eficientes.</p>
+                </div>
+                <div class="carrusel-item">
+                    <i class="fas fa-screwdriver"></i>
+                    <p>Poseo habilidades técnicas y destreza en el uso de herramientas especializadas, lo que me permite realizar tareas precisas y eficientes en entornos prácticos.</p>
+                </div>
+                
+                
+                
+            </div>
         </section>
+        
         <section id="proyectos">
             <h2>Proyectos Académicos y Profesionales</h2>
             <div class="proyecto">
@@ -87,17 +168,20 @@
                             <img src="img/Imagen1.png" alt="Horario Académico">
                         </div>
                         <div class="carrusel-item">
-                            <img src="img/Imagen2.png" alt="Facturación Electrónica">
+                            <img src="img/p.png" alt="Facturación Electrónica">
                         </div>
                         <div class="carrusel-item">
-                            <img src="img/Imagen3.png" alt="Planificación Académica">
+                            <img src="img/l.png" alt="Planificación Académica">
+                        </div>
+                        <div class="carrusel-item">
+                            <img src="img/k.png" alt="Planificación Académica">
                         </div>
                     </div>
                     <button class="carrusel-next-horario">&gt;</button>
                 </div>
-                <p>Un programa informático diseñado específicamente para este propósito puede ser una herramienta necesaria 
-                   para la Unidad Educativa Carlos Pomerio Zambrano, optimizando la organización y el manejo de horarios para
-                   todas las materias de la institución.</p>
+                <p>Para crear un sistema de horario efectivo, primero identifiqué los requisitos clave,
+                     como la autenticación de usuarios, la gestión y visualización de horarios, y las notificaciones automáticas. 
+                      Implementé una interfaz intuitiva de usuario con páginas de inicio de sesión, visualización de horarios organizada y formularios de creación de horarios simples.</p>
                 <button class="ver-mas">Ver más</button>
                 <div class="detalles">
                     <h4>Funcionalidades:</h4>
@@ -108,14 +192,80 @@
                         <li>Filtro para la consulta del horario por curso o materia</li>
                     </ul>
                     <h4>Especificaciones:</h4>
-                    <p>El sistema está desarrollado en PHP, JavaScript y MySQL.</p>
+                    <i class="fab fa-php"></i>
+                    <i class="fab fa-js"></i>
+                    <i class="fas fa-database"></i>
+                    
                 </div>
             </div>
+            <div class="proyecto">
+                <h3>Comercial Jennifer Sistema de Facturacion</h3>
+                <div class="carrusel carrusel-horario">
+                    <button class="carrusel-prev-horario">&lt;</button>
+                    <div class="carrusel-items">
+                        <div class="carrusel-item active">
+                            <img src="img/Imagen2.png" alt="Horario Académico">
+                        </div>
+                        <div class="carrusel-item">
+                            <img src="img/Imagen3.png" alt="Facturación Electrónica">
+                        </div>
+                        
+                    </div>
+                    <button class="carrusel-next-horario">&gt;</button>
+                </div>
+                  
+                <p>
+El proyecto "Comercial Jennifer - Programa de Punto de Venta" consistió en desarrollar e implementar un sistema integral de punto de venta para la gestión eficiente de inventario, facturación y ventas. Utilizando tecnologías como PHP, JavaScript y MySQL, se logró crear una plataforma robusta y escalable. Las principales funcionalidades incluyeron el registro de productos y clientes, gestión de stock, generación de facturas electrónicas, reportes de ventas y análisis de rendimiento.</p>
+                <button class="ver-mas">Ver más</button>
+                <div class="detalles">
+                    <h4>Funcionalidades:</h4>
+                    <ul>
+                        <li>Punto de venta.</li>
+                        <li>Libro Diario</li>
+                        <li>Kardex.</li>
+                        <li>Facturas</li>
+                    </ul>
+                    <h4>Especificaciones:</h4>
+                    <i class="fab fa-php"></i>
+                    <i class="fab fa-js"></i>
+                    <i class="fas fa-database"></i>
+                    
+                </div>
             
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IUoo-uTrYHI?si=K8h-Sdr1rYTrd9L5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+              
         </section>
+        
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="#" method="post">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <textarea name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <div id="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63792.24264597484!2d-80.04078705136723!3d-2.1478802000000035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d72f63a84bb9b%3A0xcc923bf175c1350b!2sOficina%20de%20Admisiones%20ESPOL!5e0!3m2!1ses-419!2sec!4v1717573692483!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+        <div id="info-contacto">
+            <h3>Información de Contacto</h3>
+            <p>Teléfono: 0900261389</p>
+            <p>Correo: fupifigu@espol.edu.ec</p>
+            <p>Oficina: Vergeles</p>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+       
+    </div>
     </main>
     <footer>
-        <p>&copy; 2024 Nombre Completo. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Fulco Pincay. Todos los derechos reservados.</p>
     </footer>
     <script src="scripts.js"></script>
 </body>

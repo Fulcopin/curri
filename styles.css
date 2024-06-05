@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -35,11 +35,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
-    background: #fff;
-    padding: 20px;
-}
-
 section {
     margin-bottom: 20px;
 }
@@ -48,15 +43,56 @@ h2 {
     color: #333;
 }
 
-.perfil-contenedor {
-    background: #fff;
-    border: 1px solid #ddd;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 20px;
-    border-radius: 10px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+.foto-info {
     display: flex;
     align-items: center;
+}
+
+.foto-info img {
+    width: 120px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 120px; /* Ajusta el tamaño de la imagen según sea necesario */
+    border-radius: 50%; /* Esto hace que la imagen tenga forma circular */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.texto-info {
+    flex-grow: 1; /* Permite que el texto ocupe todo el espacio disponible */
+}
+
+.texto-info h1 {
+    margin-top: 0; /* Elimina el margen superior predeterminado */
+}
+
+
+
+.perfil-contenedor {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #f7f7f7, #e3e3e3);
+    margin-bottom: 20px;
+}
+
+#perfil p {
+    color: #fff;
 }
 
 .perfil-contenedor i {
@@ -66,10 +102,19 @@ h2 {
 
 .perfil-contenedor p {
     margin: 0;
-    color: #555;
+    color: #fff;
 }
 
-/* Estilos CSS */
+.experiencia-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.experiencia-item p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 .carrusel {
     position: relative;
     width: 100%;
@@ -90,13 +135,29 @@ h2 {
     min-width: 100%;
     box-sizing: border-box;
     display: none;
+    text-align: justify;
+}
+
+.carrusel-item i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel-item h3 {
+    text-align: center;
+}
+
+.carrusel-item p {
+    margin: 15px;
 }
 
 .carrusel-item.active {
     display: block;
 }
 
-/* Estilos para los botones del carrusel */
 .carrusel button {
     position: absolute;
     top: 50%;
@@ -107,54 +168,59 @@ h2 {
     cursor: pointer;
     border-radius: 50%;
     transform: translateY(-50%);
-    z-index: 1; /* Asegurar que los botones estén por encima de los elementos del carrusel */
+    z-index: 1;
 }
 
-.carrusel-prev-experiencia {
-    left: 10px; /* Posición a la izquierda */
-}
-
-.carrusel-next-experiencia {
-    right: 10px; /* Posición a la derecha */
-}
+.carrusel-prev-experiencia,
 .carrusel-prev-horario {
-    left: 10px; /* Posición a la izquierda */
+    left: -12px;
+    position: relative;
+    margin-bottom: 10px;
 }
 
+.carrusel-next-experiencia,
 .carrusel-next-horario {
-    right: 10px; /* Posición a la derecha */
+    right: -12px;
+    position: relative;
+    margin-bottom: 10px;
 }
-/* Estilos para los botones del carrusel al pasar el mouse */
+
 .carrusel button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-
 .proyecto {
-    background: #fff;
+    text-align: center;
+    background: #000;
+    color: #fff;
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
+
 .proyecto img {
-    max-width: 100%;
-    max-height: 150px;
-    width: auto;
-    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    max-width: 30%;
+}
+
+.proyecto p {
+    text-align: left;
 }
 
 .proyecto h3 {
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .proyecto .detalles {
     display: none;
+}
+
+.proyecto i {
+    font-size: 36px;
 }
 
 .proyecto .ver-mas {
@@ -179,4 +245,202 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+.carrusel-educacion,
+.carrusel-habilidades {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrusel-educacion .carrusel-items,
+.carrusel-habilidades .carrusel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.carrusel-educacion .carrusel-item,
+.carrusel-habilidades .carrusel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+
+.carrusel-educacion .carrusel-item.active,
+.carrusel-habilidades .carrusel-item.active {
+    display: block;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#experiencia,
+#educacion,
+#habilidades {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 290px;
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+}
+
+#educacion,
+#habilidades {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+}
+
+#experiencia,
+#galeria {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    flex-basis: calc(50% - 20px);
+}
+
+#experiencia h2,
+#educacion h2,
+#habilidades h2 {
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+#contacto {
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+#contacto h2 {
+    margin-top: 0;
+    color: #fff;
+}
+
+#contacto form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+    background-color: #333;
+    color: #fff;
+}
+
+#contacto input[type="text"]:focus,
+#contacto input[type="email"]:focus,
+#contacto textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#contacto button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contacto button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#mapa {
+    flex-grow: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#info-contacto {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+#info-contacto h3 {
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+#info-contacto p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.informacion-contacto {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.galeria img {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .galeria img {
+        width: calc(50% - 20px);
+    }
+}
+.video-container {
+    display: flex;
+    justify-content: center;
 }
